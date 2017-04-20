@@ -1,0 +1,4 @@
+#|
+$JSON
+{"authURL":["ai2.appinventor.mit.edu"],"YaVersion":"159","Source":"Form","Properties":{"$Name":"content","$Type":"Form","$Version":"20","AlignHorizontal":"3","AlignVertical":"2","AppName":"Ace","BackgroundImage":"bg.jpg","Title":"content","Uuid":"0","$Components":[{"$Name":"Button1","$Type":"Button","$Version":"6","FontBold":"True","FontItalic":"True","FontSize":"16.0","Width":"-1070","Image":"btn.png","Text":"Motivational Study Tips","TextColor":"&HFFFFFFFF","Uuid":"689562530"},{"$Name":"Button2","$Type":"Button","$Version":"6","Width":"-1070","Image":"btn.png","Text":"Order Books","Uuid":"-1251923404"},{"$Name":"Button3","$Type":"Button","$Version":"6","Width":"-1070","Image":"btn.png","Text":"Timetable","Uuid":"1236432837"},{"$Name":"Button4","$Type":"Button","$Version":"6","Width":"-1070","Image":"btn.png","Text":"Chat Room","Uuid":"-1721233345"}]}}
+|#

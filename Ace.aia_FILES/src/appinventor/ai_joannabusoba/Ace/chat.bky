@@ -1,0 +1,232 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="global_declaration" id="1" inline="false" x="-10" y="176">
+    <field name="NAME">KEY_USER</field>
+    <value name="VALUE">
+      <block type="text" id="2">
+        <field name="TEXT">KEY_USER</field>
+      </block>
+    </value>
+  </block>
+  <block type="component_event" id="3" x="653" y="176">
+    <mutation component_type="Button" instance_name="btnsendMsg" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">btnsendMsg</field>
+    <statement name="DO">
+      <block type="procedures_callnoreturn" id="4">
+        <mutation name="isChatEntered"></mutation>
+        <field name="PROCNAME">isChatEntered</field>
+        <next>
+          <block type="component_set_get" id="102" inline="false">
+            <mutation component_type="TextBox" set_or_get="set" property_name="Text" is_generic="false" instance_name="txtchatMsg"></mutation>
+            <field name="COMPONENT_SELECTOR">txtchatMsg</field>
+            <field name="PROP">Text</field>
+            <value name="VALUE">
+              <block type="text" id="103">
+                <field name="TEXT"></field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="global_declaration" id="5" inline="false" x="-10" y="227">
+    <field name="NAME">KEY_CHAT</field>
+    <value name="VALUE">
+      <block type="text" id="6">
+        <field name="TEXT">KEY_CHAT</field>
+      </block>
+    </value>
+  </block>
+  <block type="procedures_defnoreturn" id="7" x="-10" y="278">
+    <mutation></mutation>
+    <field name="NAME">ValidateNameAndStoreName</field>
+    <statement name="STACK">
+      <block type="controls_if" id="8" inline="false">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="logic_negate" id="9" inline="false">
+            <value name="BOOL">
+              <block type="text_isEmpty" id="10" inline="false">
+                <value name="VALUE">
+                  <block type="text_trim" id="11" inline="false">
+                    <value name="TEXT">
+                      <block type="component_set_get" id="12">
+                        <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="name"></mutation>
+                        <field name="COMPONENT_SELECTOR">name</field>
+                        <field name="PROP">Text</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="component_method" id="13" inline="false">
+            <mutation component_type="FirebaseDB" method_name="StoreValue" is_generic="false" instance_name="FirebaseDB1"></mutation>
+            <field name="COMPONENT_SELECTOR">FirebaseDB1</field>
+            <value name="ARG0">
+              <block type="lexical_variable_get" id="14">
+                <field name="VAR">global KEY_USER</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block type="component_set_get" id="15">
+                <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="name"></mutation>
+                <field name="COMPONENT_SELECTOR">name</field>
+                <field name="PROP">Text</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="component_method" id="16" inline="false">
+            <mutation component_type="Notifier" method_name="LogError" is_generic="false" instance_name="Notifier1"></mutation>
+            <field name="COMPONENT_SELECTOR">Notifier1</field>
+            <value name="ARG0">
+              <block type="text" id="17">
+                <field name="TEXT">Text Area cannot be empty!</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="18" x="653" y="266">
+    <mutation component_type="FirebaseDB" instance_name="FirebaseDB1" event_name="DataChanged"></mutation>
+    <field name="COMPONENT_SELECTOR">FirebaseDB1</field>
+    <statement name="DO">
+      <block type="controls_if" id="19" inline="false">
+        <value name="IF0">
+          <block type="math_compare" id="20" inline="true">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="lexical_variable_get" id="21">
+                <mutation>
+                  <eventparam name="tag"></eventparam>
+                </mutation>
+                <field name="VAR">tag</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="lexical_variable_get" id="22">
+                <field name="VAR">global KEY_CHAT</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="component_set_get" id="23" inline="false">
+            <mutation component_type="TextBox" set_or_get="set" property_name="Text" is_generic="false" instance_name="txtchatHistory"></mutation>
+            <field name="COMPONENT_SELECTOR">txtchatHistory</field>
+            <field name="PROP">Text</field>
+            <value name="VALUE">
+              <block type="text_join" id="24" inline="false">
+                <mutation items="3"></mutation>
+                <value name="ADD0">
+                  <block type="lexical_variable_get" id="25">
+                    <mutation>
+                      <eventparam name="value"></eventparam>
+                    </mutation>
+                    <field name="VAR">value</field>
+                  </block>
+                </value>
+                <value name="ADD1">
+                  <block type="text" id="26">
+                    <field name="TEXT">\n</field>
+                  </block>
+                </value>
+                <value name="ADD2">
+                  <block type="component_set_get" id="27">
+                    <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="txtchatHistory"></mutation>
+                    <field name="COMPONENT_SELECTOR">txtchatHistory</field>
+                    <field name="PROP">Text</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="28" x="-10" y="524">
+    <mutation></mutation>
+    <field name="NAME">isChatEntered</field>
+    <statement name="STACK">
+      <block type="controls_if" id="29" inline="false">
+        <value name="IF0">
+          <block type="logic_negate" id="30" inline="false">
+            <value name="BOOL">
+              <block type="text_isEmpty" id="31" inline="false">
+                <value name="VALUE">
+                  <block type="text_trim" id="32" inline="false">
+                    <value name="TEXT">
+                      <block type="component_set_get" id="33">
+                        <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="txtchatMsg"></mutation>
+                        <field name="COMPONENT_SELECTOR">txtchatMsg</field>
+                        <field name="PROP">Text</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="procedures_callnoreturn" id="34">
+            <mutation name="ValidateNameAndStoreName"></mutation>
+            <field name="PROCNAME">ValidateNameAndStoreName</field>
+            <next>
+              <block type="component_method" id="35" inline="false">
+                <mutation component_type="FirebaseDB" method_name="StoreValue" is_generic="false" instance_name="FirebaseDB1"></mutation>
+                <field name="COMPONENT_SELECTOR">FirebaseDB1</field>
+                <value name="ARG0">
+                  <block type="lexical_variable_get" id="36">
+                    <field name="VAR">global KEY_CHAT</field>
+                  </block>
+                </value>
+                <value name="ARG1">
+                  <block type="text_join" id="37" inline="false">
+                    <mutation items="3"></mutation>
+                    <value name="ADD0">
+                      <block type="text_trim" id="38" inline="false">
+                        <value name="TEXT">
+                          <block type="component_set_get" id="39">
+                            <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="name"></mutation>
+                            <field name="COMPONENT_SELECTOR">name</field>
+                            <field name="PROP">Text</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="ADD1">
+                      <block type="text" id="40">
+                        <field name="TEXT"> : </field>
+                      </block>
+                    </value>
+                    <value name="ADD2">
+                      <block type="text_trim" id="41" inline="false">
+                        <value name="TEXT">
+                          <block type="component_set_get" id="42">
+                            <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="txtchatMsg"></mutation>
+                            <field name="COMPONENT_SELECTOR">txtchatMsg</field>
+                            <field name="PROP">Text</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="159" language-version="20"></yacodeblocks>
+</xml>

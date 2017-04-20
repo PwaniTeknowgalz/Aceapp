@@ -1,0 +1,42 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="component_event" id="1" x="61" y="16">
+    <mutation component_type="Button" instance_name="register" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">register</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="2" inline="false">
+        <value name="SCREEN">
+          <block type="text" id="3">
+            <field name="TEXT">register</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="4" x="59" y="89">
+    <mutation component_type="Button" instance_name="about" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">about</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="5" inline="false">
+        <value name="SCREEN">
+          <block type="text" id="6">
+            <field name="TEXT">about</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="7" x="60" y="178">
+    <mutation component_type="Button" instance_name="content" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">content</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="8" inline="false">
+        <value name="SCREEN">
+          <block type="text" id="9">
+            <field name="TEXT">content</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="159" language-version="20"></yacodeblocks>
+</xml>

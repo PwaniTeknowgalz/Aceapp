@@ -1,0 +1,4 @@
+#|
+$JSON
+{"authURL":["ai2.appinventor.mit.edu"],"YaVersion":"159","Source":"Form","Properties":{"$Name":"about","$Type":"Form","$Version":"20","AppName":"Ace","BackgroundImage":"bg.jpg","Title":"about","Uuid":"0","$Components":[{"$Name":"Label1","$Type":"Label","$Version":"4","FontBold":"True","FontSize":"16.0","FontTypeface":"3","Height":"250","Width":"-2","Text":"Make reading easier with Ace App. Languages must be improved for the overall grade of the student to be better. With Ace app, we strive to make languages enjoyable and easier by helping you revise as much as possible. All the Best!","Uuid":"503257774"},{"$Name":"Label2","$Type":"Label","$Version":"4","FontBold":"True","FontSize":"16.0","FontTypeface":"3","Text":"From Ace Team","Uuid":"53621861"}]}}
+|#

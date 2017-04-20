@@ -1,0 +1,55 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="component_event" id="1" x="38" y="8">
+    <mutation component_type="Button" instance_name="motivation" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">motivation</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="2" inline="false">
+        <value name="SCREEN">
+          <block type="text" id="3">
+            <field name="TEXT">motivation</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="4" x="54" y="77">
+    <mutation component_type="Button" instance_name="bookstore" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">bookstore</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="5" inline="false">
+        <value name="SCREEN">
+          <block type="text" id="6">
+            <field name="TEXT">bookstore</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="7" x="70" y="152">
+    <mutation component_type="Button" instance_name="timetable" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">timetable</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="8" inline="false">
+        <value name="SCREEN">
+          <block type="text" id="9">
+            <field name="TEXT">timetable</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="10" x="89" y="228">
+    <mutation component_type="Button" instance_name="chat" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">chat</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="11" inline="false">
+        <value name="SCREEN">
+          <block type="text" id="12">
+            <field name="TEXT">chat</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="159" language-version="20"></yacodeblocks>
+</xml>

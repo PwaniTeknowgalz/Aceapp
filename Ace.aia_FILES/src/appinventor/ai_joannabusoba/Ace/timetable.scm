@@ -1,0 +1,4 @@
+#|
+$JSON
+{"authURL":["ai2.appinventor.mit.edu"],"YaVersion":"159","Source":"Form","Properties":{"$Name":"timetable","$Type":"Form","$Version":"20","AppName":"Ace","BackgroundImage":"bg.jpg","Scrollable":"True","Title":"timetable","Uuid":"0","$Components":[{"$Name":"Label1","$Type":"Label","$Version":"4","FontBold":"True","FontTypeface":"3","Height":"300","Width":"-2","Text":"A study timetable is a handy, inexpensive tool that can help you get control over your study time. It will give you perspective on what you need to accomplish and the time you have to do it in. If you want to get organized and feel motivated to get your work done to the best of your potential, try putting together a personalized study timetable.","Uuid":"573205291"},{"$Name":"Image1","$Type":"Image","$Version":"3","Width":"-2","Picture":"tt.PNG","ScalePictureToFit":"True","Uuid":"1474897143"}]}}
+|#
